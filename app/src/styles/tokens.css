@@ -1,0 +1,223 @@
+/*
+  Design tokens.
+  Source of truth: docs/design-system.md. Keep the two files in sync.
+  Use the semantic tokens (--color-*) in components. Use the scale tokens (--gray-*, --green-*, ...) only to define semantic tokens.
+*/
+
+:root {
+  color-scheme: light;
+
+  /* ---------- Scales ---------- */
+
+  /* Gray (base) */
+  --gray-25: #fcfcfb;
+  --gray-50: #f7f7f4;
+  --gray-100: #f1f0ec;
+  --gray-200: #e6e5e0;
+  --gray-250: #deddd7;
+  --gray-300: #c9c8c1;
+  --gray-500: #8f8e86;
+  --gray-600: #6a6962;
+  --gray-900: #26251e;
+  --white: #ffffff;
+
+  /* Green: done, approved */
+  --green-50: #e3f6ec;
+  --green-200: #9fdfbd;
+  --green-400: #3fbf86;
+  --green-600: #12975f;
+  --green-700: #0d7a4c;
+  --green-900: #084a2d;
+
+  /* Yellow: waiting, be careful */
+  --yellow-50: #fff4d1;
+  --yellow-200: #ffdc7a;
+  --yellow-400: #f5b82e;
+  --yellow-600: #d98f06;
+  --yellow-700: #9a6200;
+  --yellow-900: #523300;
+
+  /* Red: needs fix, error, danger */
+  --red-50: #ffe6ec;
+  --red-200: #ffadc1;
+  --red-400: #f26085;
+  --red-600: #e0245a;
+  --red-700: #b81448;
+  --red-800: #9c1140;
+  --red-900: #5c0a24;
+
+  /* Blue: selected, on, links, focus */
+  --blue-50: #e6f0ff;
+  --blue-200: #a8c8ff;
+  --blue-400: #5b97f5;
+  --blue-600: #2f6fe0;
+  --blue-700: #2257b8;
+  --blue-900: #12306b;
+
+  /* ---------- Semantic color ---------- */
+
+  --color-bg: var(--gray-25);
+  --color-sidebar: var(--gray-50);
+  --color-panel: var(--gray-100);
+  --color-surface: var(--white);
+
+  --color-border: var(--gray-200);
+  --color-border-button: var(--gray-250);
+  --color-border-strong: var(--gray-300);
+  --color-border-hover: var(--gray-500);
+
+  --color-text: var(--gray-900);
+  --color-text-muted: var(--gray-600);
+  --color-text-disabled: var(--gray-500);
+
+  --color-primary: var(--gray-900);
+  --color-primary-hover: #3b3a33;
+  --color-primary-active: #4b4a43;
+  --color-on-primary: var(--gray-50);
+
+  --color-danger-solid: var(--red-700);
+  --color-danger-solid-hover: var(--red-800);
+  --color-danger-solid-active: #860e36;
+  --color-on-danger-solid: var(--white);
+
+  --color-pressed: var(--gray-200);
+  --color-hover: var(--gray-100);
+  --color-disabled-bg: var(--gray-100);
+  --color-disabled-border: var(--gray-200);
+
+  --color-selected-bg: var(--blue-50);
+  --color-selected: var(--blue-600);
+  --color-selected-hover: var(--blue-700);
+
+  --color-link: var(--blue-700);
+  --color-link-hover: var(--blue-900);
+
+  --color-focus: rgb(47 111 224 / 0.35);
+
+  --color-success-bg: var(--green-50);
+  --color-success-fg: var(--green-700);
+  --color-success-icon: var(--green-600);
+
+  --color-warning-bg: var(--yellow-50);
+  --color-warning-fg: var(--yellow-700);
+  --color-warning-icon: var(--yellow-600);
+
+  --color-danger-bg: var(--red-50);
+  --color-danger-fg: var(--red-700);
+  --color-danger-icon: var(--red-600);
+
+  --color-overlay: rgb(38 37 30 / 0.45);
+
+  /* ---------- Typography ---------- */
+
+  --font-sans: "Inter Variable", Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-shop: "Archivo Variable", Archivo, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+
+  /* Text styles. Use as: font: var(--text-body); */
+  --text-display: 400 1.75rem/2rem var(--font-sans);
+  --text-title: 500 1.25rem/1.75rem var(--font-sans);
+  --text-heading: 500 1rem/1.5rem var(--font-sans);
+  --text-heading-small: 500 0.875rem/1.25rem var(--font-sans);
+  --text-body: 400 0.875rem/1.25rem var(--font-sans);
+  --text-small: 400 0.8125rem/1.25rem var(--font-sans);
+  --text-label: 500 0.6875rem/1rem var(--font-sans);
+  --text-mono: 400 0.75rem/1.125rem var(--font-mono);
+
+  --tracking-display: -0.02em;
+  --tracking-label: 0.07em;
+
+  /* ---------- Space (4px base) ---------- */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 72px;
+
+  /* ---------- Shape ---------- */
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-pill: 999px;
+
+  /* ---------- Borders and focus ---------- */
+
+  --border-default: 1px solid var(--color-border);
+  --border-strong: 1px solid var(--color-border-strong);
+  --focus-ring: 0 0 0 3px var(--color-focus);
+
+  /* ---------- Controls ---------- */
+
+  --control-height: 44px;
+  --control-height-sm: 32px;
+  --tap-target: 44px;
+  --checkbox-size: 18px;
+  --switch-width: 36px;
+  --switch-height: 20px;
+  --switch-knob: 16px;
+  --chip-height: 44px;
+  --tab-min-height: 44px;
+  --pin-size: 28px;
+  --pin-size-sm: 24px;
+  --pin-size-hover: 30px;
+  --pin-ring: 3px;
+  --comment-max-length: 500;
+
+  /* ---------- Layout ---------- */
+
+  /* Breakpoints (for media queries, which cannot read variables): 640px and 900px. */
+  --container-max: 960px;
+  --container-padding: 16px;
+  --dialog-max-width: 480px;
+  --popup-max-width: 300px;
+  --toast-max-width: 420px;
+
+  /* App shell */
+  --header-height: 56px;
+  --sidebar-left-width: 280px;
+  --sidebar-right-width: 360px;
+  --sidebar-panel-width: 85vw;
+  --sidebar-panel-max-width: 320px;
+  --sidebar-sheet-max-height: 85dvh;
+  --tree-item-height: 44px;
+  --tree-indent: 16px;
+  --notification-width: 360px;
+  --unread-dot: 8px;
+
+  /* ---------- Motion ---------- */
+
+  --duration-fast: 120ms;
+  --ease-default: ease;
+  --pulse-duration: 1.4s;
+  --spinner-duration: 0.8s;
+
+  /* ---------- Stacking order ---------- */
+
+  --z-header: 10;
+  --z-sidebar-backdrop: 12;
+  --z-sidebar: 15;
+  --z-dropdown: 20;
+  --z-popup: 30;
+  --z-tooltip: 40;
+  --z-overlay: 50;
+  --z-toast: 60;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --pulse-duration: 0s;
+    --spinner-duration: 0s;
+  }
+}

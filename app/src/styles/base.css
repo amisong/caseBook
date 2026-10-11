@@ -1,0 +1,119 @@
+/* Base styles: reset, page, text styles. Uses tokens only. See docs/design-system.md. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font: var(--text-body);
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: var(--color-link);
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+/* Keyboard focus. Never removed without a replacement. */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+[tabindex='-1']:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Text styles */
+
+.display {
+  font: var(--text-display);
+  letter-spacing: var(--tracking-display);
+}
+
+.label {
+  font: var(--text-label);
+  color: var(--color-text-muted);
+}
+
+/* Skip link: hidden until it gets focus */
+
+.skip-link {
+  position: absolute;
+  left: var(--space-2);
+  top: var(--space-2);
+  z-index: var(--z-toast);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+.icon {
+  flex: none;
+}
+
+.title {
+  font: var(--text-title);
+}
+
+.heading {
+  font: var(--text-heading);
+}
+
+.mono {
+  font: var(--text-mono);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
